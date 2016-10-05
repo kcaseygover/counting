@@ -1,12 +1,23 @@
 function countLetters(uniqueChar) {
+
+uniqueChar = uniqueChar.split(" ").join("");
+var myObj = {};
   for ( var nextLtr of uniqueChar)  {
-    console.log(nextLtr);
+    //console.log(myObj[nextLtr]);
+    if (myObj[nextLtr])  {
+
+    myObj[nextLtr] ++;
+
+  } else {
+   myObj[nextLtr] = 1;
   }
-
-
+  }
+  return myObj;
 }
 
-countLetters("lighthouse in the house");
+
+console.log(countLetters("lighthouse in the house"));
+
 
 
 //var noSpaces = char.split(" ").join("");
